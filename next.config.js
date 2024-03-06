@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath:'/messanger',
+  output: "export",
+  reactStrictMode: true,
   experimental: {
     appDir: true,
     swcPlugins: [["next-superjson-plugin", {}]]
