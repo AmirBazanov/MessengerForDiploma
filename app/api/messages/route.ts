@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 import { pusherServer } from '@/app/libs/pusher'
 import prisma from "@/app/libs/prismadb";
-export const dynamic = "force-static";
+
 
 export async function POST(
   request: Request,
@@ -18,6 +18,7 @@ export async function POST(
     } = body;
 
     if (!currentUser?.id || !currentUser?.email) {
+      console.log(currentUser)
       return new NextResponse('Unauthorized', { status: 401 });
     }
 

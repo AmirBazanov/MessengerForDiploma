@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 
 import prisma from "@/app/libs/prismadb";
 import { pusherServer } from "@/app/libs/pusher";
-export const dynamic = "force-static";
-
 export async function POST(
   request: Request,
 ) {
